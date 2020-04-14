@@ -86,7 +86,7 @@ public class TestClass extends WebDriverDef {
 
 		closeBrowser();
 	}
-
+// testcase 2
 	
 	public void twoInput() throws InterruptedException {
 		int step = 1;
