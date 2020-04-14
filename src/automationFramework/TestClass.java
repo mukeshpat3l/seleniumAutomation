@@ -4,16 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 
 public class TestClass extends WebDriverDef {
 
-	
+	@Test
 	public void singleInput() throws InterruptedException {
 		int step = 1;
 
 		System.out.println("Step: " + step++ + " - Open Browser and open Selenium Easy demo site.");
-		launchBrowser();
 
 		String siteTitle = "Selenium Easy - Best Demo website to practice Selenium Webdriver Online";
 		Thread.sleep(2000);
@@ -83,17 +83,14 @@ public class TestClass extends WebDriverDef {
 		} else {
 			System.out.println("FAILED - Displayed message is NOT same as entered in input field.");
 		}
-
-		closeBrowser();
 	}
-// testcase 2
-	
+
+	@Test
 	public void twoInput() throws InterruptedException {
 		int step = 1;
-		// Launch the Demo Website
 
 		System.out.println("Step: " + step++ + " - Open Browser and open Selenium Easy demo site.");
-		launchBrowser();
+		
 		System.out.println("Step: " + step++ + " - Click on the All Examples > Input Forms > Simple Form Demo link.");
 		WebElement inputForms = driver
 				.findElement(By.xpath("//li[@class='tree-branch']//a[contains(text(),'Input Forms')]"));
@@ -149,18 +146,7 @@ public class TestClass extends WebDriverDef {
 		} else {
 			System.out.println("FAILED - Displayed Total is not as per your values input.");
 		}
-		closeBrowser();
 	}
-
-	public static void main(String[] args) throws InterruptedException {
-
-		TestClass objTC = new TestClass();
-
-		objTC.singleInput();
-		objTC.twoInput();
-
-	}
-
 }
 
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="selenium Automation">
+    <classes>
+      <class name="automationFramework.TestClass"/>
+    </classes>
+  </test> <!-- selenium Automation -->
+  <test name="selenium Automation(failed)">
+    <classes>
+      <class name="automationFramework.TestClass">
+        <methods>
+          <include name="browserSetUp"/>
+          <include name="singleInput"/>
+          <include name="twoInput"/>
+        </methods>
+      </class> <!-- automationFramework.TestClass -->
+    </classes>
+  </test> <!-- selenium Automation(failed) -->
+</suite> <!-- Failed suite [Suite] -->
